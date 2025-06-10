@@ -628,7 +628,7 @@ function processTermDev(dev_obj_name, data) {
             updateState(state_name + 'thermostat_ext_mode', 'Режим термостата', data['thermostat_ext_mode'], {type: 'number', states: modess, write: true});
         } else {
             let modess = 'comfort:Комфорт;econom:Эконом;idle:Антизаморозка;schedule:Расписание';
-            updateState(state_name + 'thermostat_mode', 'Режим термостата', data['thermostat_mode'], {type: 'object', states: modess, write: true});
+            updateState(state_name + 'thermostat_mode', 'Режим термостата', data['thermostat_mode'], {type: 'number', states: modess, write: true});
             let obj = data['thermostat_mode_temps'];
             for (let p in obj) {
                 if(obj.hasOwnProperty(p) && obj[p]) {
